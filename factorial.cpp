@@ -1,7 +1,9 @@
 # include <iostream>
 using namespace std;
 int factorial(int n){
-	if (n<=1)
+	if (n<0)
+		return -1;
+	else if (n<=1)
 		return 1;
 	else
 		return n * factorial(n-1);
@@ -10,6 +12,10 @@ int factorial(int n){
 int main(){
 	int n;
 	cin >> n;
-	cout << factorial(n);
+	int f = factorial(n);
+	if (f==-1)
+		cout << "Number is negative";
+	else
+		cout << f;
 	return 0;
 }

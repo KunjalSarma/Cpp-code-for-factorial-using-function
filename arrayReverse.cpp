@@ -3,8 +3,7 @@ using namespace std;
 int * rev(int arr[],int size){
     int *p;
     p= new int[size];
-    for(int i=0;i<size;i++)
-     p[i]=arr[size-i-1];
+    for(int i=0;i<size;p[i]=arr[size-i-1],i++);
     return p;
 }
 int main()
